@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Baby Preventivo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="icon" href="img/tabicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Bootstrap.css">
+    <!--Primer carrusel-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!--Para que el modal aparezca solo-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myModal").modal('show');
+        });
+    </script>
+    <!--Fin del modal que aparece solo-->
+
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '430533364961325');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height='1' width='1" style='display:none'
+            src='https://www.facebook.com/tr?id=430533364961325&ev=PageView&noscript=1' /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+
+    <div class="hide-on-desktop" style="background-color: rgb(255, 255, 255); height: 100vh; ">
+        <img src="img/logo.svg" style="width:100%; padding-top: 100px;">
+        <h1 style="color: rgb(0, 0, 0); font-size: 30px; padding-top: 150px; margin: 0; padding-left: 70px;">PRÓXIMAMENTE</h1><br><br>
+    </div>
+
+    <div class="hide-on-mobile-tablet">
+        <!--Navbar-->
+        <div class="navbar">
+            <div class="nav-redes">
+                <div>
+                     <!--a href="contacto.html" target="_blank" class="contactanos">CONTÁCTANOS</a-->
+                    <a href="https://www.facebook.com/resveramx" target="_blank">
+                        <img src="img/fb.svg" alt="facebook"></a>
+                    <a href="https://instagram.com/resveramx" target="_blank">
+                        <img src="img/insta.svg" alt="instagram"></a>
+
+                    <!--Nuevo boton-->
+                    <div class="menu-icon nav-redes hide-on-desktop" style="z-index: 9;">
+                        <input class="menu-icon__cheeckbox" type="checkbox" onclick="OCNav()" />
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin nuevo boton-->
+            </div>
+            <a href="index.html">
+                <img class="navbarLogo" src="img/logo.svg" alt="inicio;">
+            </a>
+            <!--Subnav-->
+            <div class="subnavCentro hide-on-mobile-tablet">
+                <div class="subnav">
+                    <button role="link" onclick=window.location='tecnologias.html' class="subnavbtn">Tecnologías<i
+                        class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content subnav-contentVacio">
+                        <a href="TReskin.html">Reskin</a>
+                        <a href="TSkinGlow.html">Skin Glow</a>
+                        <a href="TDiamond.html">Diamond Lifting</a>
+                        <a href="TSkinRenew.html">Skin Renew</a>
+                        <a href="TLuxe.html">Luxe Resurfacing</a>
+                        <a href="TNewBeg.html">A New Beginning</a>
+                    </div>
+                </div>
+                <div class="subnav hide-on-mobile-tablet">
+                    <button role="link" onclick=window.location='faciales.html' class="subnavbtn">Faciales<i
+                        class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content subnav-contentVacio">
+                        <a href="FHidratante.html">Facial Hydratance</a>
+                        <a href="FLifting.html">Facial Lifting</a>
+                        <a href="FPetal.html">Facial Petal Peel</a>
+                        <a href="FAqua.html">Facial Aqua Lift</a>
+                        <a href="FDeep.html">Deep Cleanse</a>
+                        <a href="FDetox.html">Facial Magnetic Detox</a>
+                        <a href="FNefertiti.html">Nefertiti Experience</a>
+
+                    </div>
+                </div>
+                <div class="subnav hide-on-mobile-tablet">
+                    <button role="link" onclick=window.location='mesoterapia.html' class="subnavbtn">Mesoterapia<i
+                        class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content subnav-contentVacio">
+                        <a href="MDPig.html">D Pigment</a>
+                        <a href="MSkin.html">Skin Light</a>
+                        <a href="MRad.html">Radiance Skin</a>
+                        <a href="MVital.html">Vitality Facial</a>
+                    </div>
+                </div>
+                <div class="subnav hide-on-mobile-tablet"><button role="link" onclick=window.location='medicina.html' class="subnavbtn">Medicina
+                    Estética<i class="fa fa-caret-down"></i></button>
+
+                    <!-- <div class="subnav-content subnav-contentVacio">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Botox</th>
+                                <th>Relleno</th>
+                                <th>Botox/Relleno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="">Baby Botox</a></td>
+                                <td><a href="">Baby Relleno</a></td>
+                                <td><a href="">Baby Botox / Relleno</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Baby Preventivo</a></td>
+                                <td><a href="">Relleno Preventivo</a></td>
+                                <td><a href="">Botox / Relleno Preventivo</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Baby Renuévate</a></td>
+                                <td><a href="">Relleno Renuévate</a></td>
+                                <td><a href="">Botox / Relleno Renuévate</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+                </div>
+            </div>
+        </div>
+        <!--Fin Subnav-->
+
+        <!--Sidemenu-->
+        <div>
+            <div id="mySidenav" class="sidenav">
+                <a href="index.html">Inicio</a>
+                <a href="tecnologias.html">Tecnologías</a>
+                <a href="faciales.html">Faciales</a>
+                <a href="mesoterapia.html">Mesoterapia</a>
+                <a href="medicina.html">Medicina Estética</a>
+            </div>
+            <!--Fin Sidemenu-->
+            <!--Fin Navbar-->
+            <!--Boton de Whats-->
+            <div>
+                <a href="https://wa.me/525555315438" target="_blank"><img class="btnwhats" src="img/hwhats.svg"></a>
+            </div>
+            <!--Fin Boton de Whats-->
+            <!--Contenido-->
+            <div style="margin-top: 100px;">
+                <table class="tablaopc">
+                    <tr>
+                        <td><img src="img/ME2.png" style="height: 550px;"></td>
+                        <td class="bordeprod">
+                            <h1>Baby Preventivo</h1>
+                            <p style="font-size: 10px; font-style: italic;"><img src="img/empty.png"> Básico 50 und.</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size: 10px;">Día 1 </p>
+                                            <p style="font-size: 10px;">Día 1 </p>
+                                            <p style="font-size: 10px;">Día 3 </p>
+                                            <p style="font-size: 10px;">Día 17 </p>
+                                        </td>
+                                        <td>
+                                            <ul class="listprod">
+                                                </li>Análisis / Consulta</li>
+                                                </li>Limpieza Básica</li>
+                                                </li>Botox</li>
+                                                </li>Retoque / Revisión</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <p style="font-size: 10px; font-style: italic;"><img src="img/empty.png"> Luxe 50 und.</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size: 10px;">Día 1 </p>
+                                            <p style="font-size: 10px;">Día 1 </p>
+                                            <p style="font-size: 10px;">Día 1 </p>
+                                            <p style="font-size: 10px;">Día 3 </p>
+                                            <p style="font-size: 10px;">Día 17 </p>
+                                            <p style="font-size: 10px;">Día 17 </p>
+                                            <p style="font-size: 10px;">Día 30 </p>
+                                        </td>
+                                        <td>
+                                            <ul class="listprod">
+                                                </li>Análisis / Consulta</li>
+                                                </li>Limpieza 30 min</li>
+                                                </li>Skin Renew</li>
+                                                </li>Botox</li>
+                                                </li>Diamond</li>
+                                                </li>Retoque / Revisión</li>
+                                                </li>Skin Renew</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button role="link" onclick="javascript:window.open('https://wa.link/m4e73p', '_blank');" class="btn abtna">RESERVAR</button>
+                        </td>
+                    </tr>
+                </table>
+                <!--Seccion carrusel-->
+                <div>
+                    <h3 style="margin-left: 100px; padding-top: 30px; font-size: 30px; font-family: GabrielaSReg;">El tratamiento ideal para ti.</h3>
+                    <div id="app" class="carrusel">
+                    </div>
+                </div>
+                <!--Fin seccion carrusel-->
+                <!--Fin Contenido-->
+                <<footer>
+                    <p class="footerTexto">*Los resultados de los tratamientos mostrados pueden variar de acuerdo a las características de cada persona al igual que el tiempo utilizado para cada tratamiento. <br> *Es indispensable la realización de una valoración inicial y
+                        final por tratamiento.
+                    </p>
+                    <div class="tablaContainer">
+                        <table align="center" class="tabla">
+                            <tbody>
+                                <tr>
+                                    <td class="tdfooter">RESERVA CON NOSOTROS</td>
+                                    <td class="tdfooter">NUESTRA UBICACIÓN</td>
+                                    <td class="tdfooter" rowspan="6" style="padding-bottom: 10%;"><img src="img/logoFooter.png" style="width: 80%;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdfooter">hola@resvera.com.mx<br><br>55-8946-9744</td>
+                                    <td class="tdfooter" style="line-height: 20px;">Arquímedes 198,<br>Colonia Polanco, Miguel Hidalgo, CDMX.</td>
+                                </tr>
+                                <tr>
+                                    <td class="tdfooter">
+                                        <button role="link" onclick="javascript:window.open('https://wa.link/m4e73p', '_blank');" class="btn fbtna" style="margin: 0%;">RESERVAR</button></td>
+                                    <td class="tdfooter">
+                                        <bu<button role="link" onclick="javascript:window.open('https://g.page/Resvera?share', '_blank');" class="btn fbtna" style="letter-spacing: 3px; margin: 0;">CÓMO LLEGAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdfooter">
+                                    </td>
+                                    <td class="tdfooter">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdfooter" style="font-size: 15px;">
+                                        COFEPRIS #213300536X055
+                                    </td>
+                                    <td class="tdfooter">SÍGUENOS EN NUESTRAS REDES SOCIALES<br>
+
+                                        <a href="https://www.facebook.com/resveramx" target="_blank">
+                                            <img src="img/ffacebook.svg" alt="facebook" style="margin: 5px; margin-top: 3.5vh; width: 20px;"></a>
+                                        <a href="https://instagram.com/resveramx" target="_blank">
+                                            <img src="img/finsta.svg" alt="instagram" style="margin: 5px; margin-top: 3.5vh; width: 20px;"></a>
+                                        <a href="https://wa.link/m4e73p" target="_blank" target="_blank">
+                                            <img src="img/fwhats.svg" alt="WhatsApp" style="margin: 5px; margin-top: 3.5vh; width: 20px;"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdfooter"></td>
+                                    <td class="tdfooter"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: left; padding-left: 75px;">
+                                        <p>Copyright &copy;
+                                            <script>
+                                                document.write(new Date().getFullYear());
+                                            </script>
+                                            Resvera Todos los derechos reservados <a href="avisoPriv.html" style="color: rgb(237, 237, 237); text-decoration-line:underline ;">Aviso de Privacidad</a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3 " style="text-align: center; ">
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </footer>
+                    <!--Fin contenido-->
+                    <!--Scripts-->
+                    <!--Sidemenu-->
+                    <script>
+                        //Para la funcionalidad del sidemenu
+                        function OCNav() {
+                            var nav = document.getElementById("mySidenav");
+                            var estado = nav.style.width;
+
+                            if (estado <= "0px") {
+                                openNav();
+                            } else {
+                                closeNav();
+                            }
+                        }
+
+                        function openNav() {
+                            document.getElementById("mySidenav").style.width = "330px";
+                        }
+
+                        function closeNav() {
+                            document.getElementById("mySidenav").style.width = "0px";
+                        }
+                    </script>
+                    <!--Fin sidemenu-->
+
+                    <!--Carrusel-->
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.min.js '></script>
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js '></script>
+                    <script src="scripts/scriptMed.js"></script>
+
+                    <!--Fin Carrusel-->
+                    <!--Fin Scripts-->
+</body>

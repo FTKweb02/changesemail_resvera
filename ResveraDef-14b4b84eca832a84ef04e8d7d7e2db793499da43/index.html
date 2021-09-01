@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Resvera Skin Care Clinic - Spa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+    <link rel="icon" href="img/tabicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Bootstrap.css">
+    <!--Primer carrusel-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '430533364961325');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height='1' width='1" style=' display:none'
+            src='https://www.facebook.com/tr?id=430533364961325&ev=PageView&noscript=1' /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+
+
+<body style="background-color: rgb(255, 255, 255);">
+    <!--movil-->
+    <div class="hide-on-desktop">
+        <!--Modal-->
+        <div>
+            <!--The Modal-->
+            <div id="myModal" class="modal">
+                <! -- Modal content -- >
+                <div class="modal-content">
+                    <form action="registro.php" method="POST" style="width: 10vw;">
+                        <div style=" background-color: rgb(0, 0, 0); color: white; width: 80vw;">
+                            <!--Formulario-->
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                            <br>
+                            <h1 style="text-align: left; color: rgb(221, 135, 152); padding-left: 115px;">
+                                Regístrate</h1>
+                            <p style="text-align: left; font-size: 14px; padding-left: 20px;">¡Y recibe una valoración inicial de tu piel sin costo!
+                            </p>
+                            <input class="formutexto" type="text" placeholder="Nombre" name="nombre" required>
+
+                            <input class="formutexto" type="tel" placeholder="Teléfono (10 dígitos)" name="telefono" required pattern="[0-9]{10}">
+
+
+                            <h4 style="margin-top: 35px; font-size: 1.1rem; letter-spacing: 1px;">¿Cómo quieres que te contactemos?</h4>
+                            <div class="centroV">
+                                <input class="checkmark" type="checkbox" checked="checked" name="whats" value="Acepta WhatsApp"> WhatsApp
+                            </div>
+                            <div class="centroV">
+                                <input class="checkmark" type="checkbox" name="llamada" value="Acepta Llamadas"> Llamada telefónica
+                            </div>
+                            <h4 style="margin-top: 30px;font-size: 1.1rem; letter-spacing: 1px;"> Horario de contacto:
+                            </h4>
+                            <select class="dropdown" name="horario" id="horario">
+                        <option value="culquier hora" selected="selected">A cualquier hora</option>
+                        <option value="09 a 14">09-14 hrs.</option>
+                        <option value="14 a 18">14-18 hrs.</option>
+                    </select>
+                            <br>
+                            <div style="padding-left: 7rem; margin-top: 2rem;">
+                                <button id="boton" href="Formulario.html" type="submit" value="Enviar" class="btn fbtna">Registrarse</button>
+                            </div>
+                            <button type="reset" id="limpiar" hidden=""></button>
+                        </div>
+                    </form>
+                    <script>
+                        $(document).ready(function() {
+                            $("#limpiar").click();
+                            $("#form-comun > textarea").html("");
+                        });
+                    </script>
+                    <!--Fin formulario-->
+        </div>
+        <!--Fin Modal-->
+        <!--Navbar-->
+        <div class="navbar" style="padding-top: 1vh;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 88vw;">
+                            <a href="index.html">
+                                <img class="logo_movil" src="img/logo_mobil.svg">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="https://wa.me/525555315438">
+                                <img class="wha_movil" src="img/whats.svg">
+                            </a>
+                        </td>
+
+                        <td>
+                            <div class="menu-icon" style="z-index: 9;">
+                                <input class="menu-icon__cheeckbox" type="checkbox" onclick="OCNav();" />
+                                <div>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!--Primer Sidenav-->
+                            <div class="sidenav" id="mySidenav">
+                                <table>
+                                    <tbody>
+                                        <tr onclick="OCNav2()">
+                                            <td>
+                                                <a>TECNOLOGÍAS</a>
+                                            </td>
+                                            <td>
+                                                <img src="img/flechitaDer.png">
+                                            </td>
+                                        </tr>
+                                        <tr onclick="OCNav3()">
+                                            <td>
+                                                <a>FACIALES</a>
+                                            </td>
+                                            <td>
+                                                <img src="img/flechitaDer.png">
+                                            </td>
+                                        </tr>
+                                        <tr onclick="OCNav4()">
+                                            <td>
+                                                <a>MESOTERAPIA</a>
+                                            </td>
+                                            <td>
+                                                <img src="img/flechitaDer.png">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><a href="medicina.html">MEDICINA&nbspESTÉTICA</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="redesMov" style="border-top: 3vh solid transparent;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a style="color: rgb(221, 135, 152);">CONTÁCTANOS</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://www.facebook.com/resveramx" target="_blank">
+                                                    <img src="img/fbSB.png"></a>
+                                            </td>
+
+                                            <td>
+                                                <a href="https://instagram.com/resveramx" target="_blank">
+                                                    <img src="img/instaSB.png"></a>
+                                            </td>
+
+                                            <td>
+                                                <a href="https://wa.link/m4e73p" target="_blank">
+                                                    <img src="img/whatsSB.png"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--Segundo Sidenav-->
+                            <div class="sidenav" id="mySidenav2">
+                                <table class="subSidenav">
+                                    <tbody>
+                                        <tr onclick="closeNav2()">
+                                            <td>
+                                                <a href="#" style="padding-bottom: 2.5vh;"><img style="margin-right: 2vw;" src="img/flechitaIzq.png"> Todo</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="tecnologias.html" style="padding: 0.5rem 6vh;">TECNOLOGÍAS</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="TReskin.html">Reskin</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="TSkinGlow.html">Skin&nbspGlow</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="TDiamond.html">Diamond&nbspLifting</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="TSkinRenew.html">Skin&nbspRenew</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="TLuxe.html">Luxe&nbspResurfacing</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="TNewBeg.html">A&nbspNew&nbspBeginning</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!--Tercer Sidenav-->
+                            <div class="sidenav" id="mySidenav3">
+                                <table class="subSidenav">
+                                    <tbody>
+                                        <tr onclick="closeNav3()">
+                                            <td>
+                                                <a href="#" style="padding-bottom: 2.5vh;"><img style="margin-right: 2vw;" src="img/flechitaIzq.png"> Todo</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="faciales.html" style="padding: 0.5rem 6vh;">FACIALES</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="FHidratante.html">Facial&nbspHydratance</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="FLifting.html">Facial&nbspLifting</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="FPetal.html">Facial&nbspPetal&nbspPeel</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="FAqua.html">Facial&nbspAqua&nbspLift</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="FDeep.html">Deep&nbspCleanse</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="FDetox.html">Facial&nbspMagnetic&nbspDetox</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="FNefertiti.html">Nefertiti&nbspExperience</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!--Cuarto Sidenav-->
+                            <div class="sidenav" id="mySidenav4">
+                                <table class="subSidenav">
+                                    <tbody>
+                                        <tr onclick="closeNav4()">
+                                            <td>
+                                                <a href="#" style="padding-bottom: 2.5vh;"><img style="margin-right: 2vw;" src="img/flechitaIzq.png"> Todo</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="mesoterapia.html" style="padding: 0.5rem 6vh;">MESOTERAPIA</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="MDPig.html">D&nbspPigment</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="MSkin.html">Skin&nbspLight</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="MRad.html">Radiance&nbspSkin</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="MVital.html">Vitality&nbspFacial</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="TodoSideNav" id="Nibba"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Fin Navbar-->
+        <!--video-->
+        <div style="padding-top: 8vh;">
+            <video src="Video/faciales.mp4" autoplay muted loop style="width: 100vw;"></video>
+        </div>
+        <!--fin video-->
+        <!--nosotros-->
+        <div class="nosotrosMov">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p style="letter-spacing: 3px;font-size: 2.2vw;">NOSOTROS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 style="font-size: 7vw;">Una experiencia más allá del bienestar</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Somos un Skin Care Clinic - SPA, especializado en el cuidado de tu piel, te ofrecemos una experiencia personalizada con tratamientos específicos, alta tecnología, medicina estética y facialistas cuidadosamente seleccionados.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button role="link" onclick="javascript:window.open('https://wa.link/m4e73p', '_blank');" class="btn btna">RESERVAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--fin nosotros-->
+        <!--servicios-->
+        <div class="serviciosMov">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h3>Tratamientos para tu piel</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="servMov">
+                                <a href="tecnologias.html">
+                                    <img src="img/CarTec.png">
+                                    <div class="txtImg">
+                                        <h3>Tecnologías</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="servMov">
+                                <a href="faciales.html">
+                                    <img src="img/CarFaci.png">
+                                    <div class="txtImg">
+                                        <h3>Faciales</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="servMov">
+                                <a href="mesoterapia.html">
+                                    <img src="img/CarMeso.png">
+                                    <div class="txtImg">
+                                        <h3>Mesoterapia</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="servMov">
+                                <a href="medicina.html">
+                                    <img src="img/carME.png">
+                                    <div class="txtImg">
+                                        <h3>Medicina&nbspEstética</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--fin servicios-->
+        <!--Experiencia-->
+        <div class="nosotrosMov">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p style="letter-spacing: 3px; font-size: 2.2vw;">EXPERIENCIA</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 style="font-size: 7vw;">Disfruta de nuestras instalaciones</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Cabinas de lujo y màximo confort para transportarte a un ambiente de relajaciòn total.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Segundo carrusel-->
+        <div>
+            <div class="slideshow-container ">
+                <div class="mySlidesMov fade ">
+                    <img src="img/Resvera.jpeg " style="width:100% ">
+                    <div class="text "> Resvera<br>
+                    </div>
+                </div>
+                <div class="mySlidesMov fade ">
+                    <img src="img/Lobby.jpeg " style="width:100% ">
+                    <div class="text "> Lobby&nbspResvera<br>
+                    </div>
+                </div>
+                <div class="mySlidesMov fade ">
+                    <img src="img/InstaSpot.jpeg " style="width:100% ">
+                    <div class="text "> Insta&nbspSpot&nbspResvera<br>
+                    </div>
+                </div>
+
+                <div class="mySlidesMov fade ">
+                    <img src="img/cab1.png " style="width:100% ">
+                    <div class="text "> Cabina&nbspEmerald<br>
+                    </div>
+                </div>
+
+                <div class="mySlidesMov fade ">
+                    <img src="img/cab2.png " style="width:100% ">
+                    <div class="text ">Cabina&nbspOpal<br>
+                    </div>
+                </div>
+
+                <div class="mySlidesMov fade ">
+                    <img src="img/cab3.png " style="width:100% ">
+                    <div class="text ">Cabina&nbspPearl<br>
+                    </div>
+                </div>
+
+                <div class="mySlidesMov fade ">
+                    <img src="img/cab4.png " style="width:100% ">
+                    <div class="text ">Cabina&nbspRuby<br>
+                    </div>
+                </div>
+
+                <div class="mySlidesMov fade ">
+                    <img src="img/cab5.png " style="width:100% ">
+                    <div class="text ">Cabina&nbspSapphire<br>
+                    </div>
+                </div>
+
+                <div class="mySlidesMov fade ">
+                    <img src="img/cab6.png " style="width:100% ">
+                    <div class="text">Cabina&nbspStarlight<br>
+                    </div>
+                </div>
+
+                <div class="mySlidesMov fade ">
+                    <img src="img/terraza.jpeg " style="width:100% ">
+                    <div class="text"> Terraza&nbspStarlight<br>
+                    </div>
+                </div>
+                <div class="flechitas">
+                    <a class="prevMov" onclick="plusSlidesMov(-1) ">&#10094;</a>
+                    <a class="nextMov" onclick="plusSlidesMov(1) ">&#10095;</a>
+                </div>
+            </div>
+            <br>
+            <div class="dot_container ">
+                <span class="dotMov" onclick="currentSlideMov(1) "></span>
+                <span class="dotMov" onclick="currentSlideMov(2) "></span>
+                <span class="dotMov" onclick="currentSlideMov(3) "></span>
+                <span class="dotMov" onclick="currentSlideMov(4) "></span>
+                <span class="dotMov" onclick="currentSlideMov(5) "></span>
+                <span class="dotMov" onclick="currentSlideMov(6) "></span>
+                <span class="dotMov" onclick="currentSlideMov(7) "></span>
+                <span class="dotMov" onclick="currentSlideMov(8) "></span>
+                <span class="dotMov" onclick="currentSlideMov(9) "></span>
+                <span class="dotMov" onclick="currentSlideMov(10) "></span>
+            </div>
+        </div>
+        <!--Fin segundo carrusel-->
+        <button role="link" onclick="javascript:window.open('https://wa.link/m4e73p', '_blank');" class="btn btna" style="left: 6vw; bottom: 10vw;">RESERVAR</button>
+        <!--fin Experiencia-->
+        <!--Footer-->
+        <footer style="bottom: 0;">
+            <p class="footerTextoMov">*Los resultados de los tratamientos mostrados pueden variar de acuerdo a las características de cada persona al igual que el tiempo utilizado para cada tratamiento. <br> *Es indispensable la realización de una valoración inicial y final por
+                tratamiento.
+            </p>
+            <div class="nosotrosMov">
+                <table style="margin-top: 8vh;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>RESERVACIONES</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>hola@resvera.com.mx</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>55-8946-9744</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn fbtna " style="top: 0; ">RESERVAR</button>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>NUESTRA SUCURSAL</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Arquímedes 198,<br>Colonia Polanco,<br>Miguel Hidalgo, CDMX</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+
+                                    <button role="link " onclick="javascript:window.open( 'https://g.page/Resvera?share', '_blank'); " class="btn fbtna " style="top: 0; ">CÓMO LLEGAR</button>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SIGUENOS EN NUESTRAS<br>REDES SOCIALES</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://www.facebook.com/resveramx " target="_blank ">
+                                    <img src="img/ffacebook.svg " alt="facebook "></a>
+                                <a href="https://instagram.com/resveramx " target="_blank ">
+                                    <img src="img/finsta.svg " alt="instagram "></a>
+                                <a href="https://wa.link/m4e73p " target="_blank " target="_blank ">
+                                    <img src="img/fwhats.svg " alt="WhatsApp "></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>COFEPRIS #213300536X055</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="margin-bottom: 7vh;">Copyright &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    Resvera<br>Todos los derechos reservados
+                                    <a href="avisoPriv.html" target="_blank" style="color: rgb(237, 237, 237); text-decoration-line:underline;"><br>&#32;<br>Aviso de Privacidad</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="logofooter">
+                <img src="img/logoFooter.png">
+            </div>
+        </footer>
+        <!--Fin Footer-->
+    </div>
+    <!--Fin movil------------------------------------------------------------------------------------------>
+    <div class="hide-on-mobile-tablet ">
+        <!--Navbar-->
+        <div class="navbar ">
+            <div class="nav-redes ">
+                <div>
+                    <!--a href="contacto.html " target="_blank " class="contactanos ">CONTÁCTANOS</a-->
+                    <a href="htt0s://www.facebook.com/resveramx " target="_blank ">
+                        <img src="img/fb.svg " alt="facebook "></a>
+                    <a href="https://instagram.com/resveramx " target="_blank ">
+                        <img src="img/insta.svg " alt="instagram "></a>
+                </div>
+            </div>
+            <a href="index.html ">
+                <img class="navbarLogo " src="img/logo.svg " alt="inicio; ">
+            </a>
+            <!--Subnav-->
+            <div class="subnavCentro hide-on-mobile-tablet ">
+                <div class="subnav ">
+                    <button role="link " onclick=window.location='tecnologias.html' class="subnavbtn ">Tecnologías<i
+                        class="fa fa-caret-down "></i></button>
+                    <div class="subnav-content subnav-contentVacio ">
+                        <a href="TReskin.html ">Reskin</a>
+                        <a href="TSkinGlow.html ">Skin Glow</a>
+                        <a href="TDiamond.html ">Diamond Lifting</a>
+                        <a href="TSkinRenew.html ">Skin Renew</a>
+                        <a href="TLuxe.html ">Luxe Resurfacing</a>
+                        <a href="TNewBeg.html ">A New Beginning</a>
+                    </div>
+                </div>
+                <div class="subnav hide-on-mobile-tablet ">
+                    <button role="link " onclick=window.location='faciales.html' class="subnavbtn ">Faciales<i
+                        class="fa fa-caret-down "></i></button>
+                    <div class="subnav-content subnav-contentVacio ">
+                        <a href="FHidratante.html ">Facial Hydratance</a>
+                        <a href="FLifting.html ">Facial Lifting</a>
+                        <a href="FPetal.html ">Facial Petal Peel</a>
+                        <a href="FAqua.html ">Facial Aqua Lift</a>
+                        <a href="FDeep.html ">Deep Cleanse</a>
+                        <a href="FDetox.html ">Facial Magnetic Detox</a>
+                        <a href="FNefertiti.html ">Nefertiti Experience</a>
+
+                    </div>
+                </div>
+                <div class="subnav hide-on-mobile-tablet ">
+                    <button role="link " onclick=window.location='mesoterapia.html' class="subnavbtn ">Mesoterapia<i
+                        class="fa fa-caret-down "></i></button>
+                    <div class="subnav-content subnav-contentVacio ">
+                        <a href="MDPig.html ">D Pigment</a>
+                        <a href="MSkin.html ">Skin Light</a>
+                        <a href="MRad.html ">Radiance Skin</a>
+                        <a href="MVital.html ">Vitality Facial</a>
+                    </div>
+                </div>
+                <div class="subnav hide-on-mobile-tablet "><button role="link " onclick=window.location='medicina.html' class="subnavbtn ">Medicina
+                    Estética<i class="fa fa-caret-down "></i></button>
+
+                    <!-- <div class="subnav-content subnav-contentVacio ">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Botox</th>
+                                <th>Relleno</th>
+                                <th>Botox/Relleno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href=" ">Baby Botox</a></td>
+                                <td><a href=" ">Baby Relleno</a></td>
+                                <td><a href=" ">Baby Botox / Relleno</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">Baby Preventivo</a></td>
+                                <td><a href=" ">Relleno Preventivo</a></td>
+                                <td><a href=" ">Botox / Relleno Preventivo</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">Baby Renuévate</a></td>
+                                <td><a href=" ">Relleno Renuévate</a></td>
+                                <td><a href=" ">Botox / Relleno Renuévate</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+                </div>
+            </div>
+        </div>
+        <!--Fin Subnav-->
+        <div>
+            <!--Fin Navbar-->
+            <!--Boton de Whats-->
+            <div>
+                <a href="https://wa.me/525555315438 " target="_blank ">
+                    <img class="btnwhats " src="img/hwhats.svg "></a>
+            </div>
+            <!--Fin Boton de Whats-->
+            <!--Modal-->
+            <div>
+                <!--The Modal-->
+                <div id="myModalM" class="modal">
+                    <!--Modal content-->
+                    <div class="modal-content">
+                        <table class="tablaModal">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <form action="registro.php" method="POST">
+                                            <div class="container" style=" background-color: rgb(0, 0, 0); color: white;">
+                                                <!--Formulario-->
+                                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                                <br>
+                                                <h1 style="text-align: left; color: rgb(221, 135, 152); padding-left: 115px;">
+                                                    Regístrate</h1>
+                                                <p style="text-align: left; font-size: 14px; padding-left: 20px;">¡Y recibe una valoración inicial de tu piel sin costo!
+                                                </p>
+                                                <input class="formutexto" type="text" placeholder="Nombre" name="nombre" required>
+
+                                                <input class="formutexto" type="tel" placeholder="Teléfono (10 dígitos)" name="telefono" required pattern="[0-9]{10}">
+
+
+                                                <h4 style="margin-top: 35px; font-size: 1.1rem; letter-spacing: 1px;">¿Cómo quieres que te contactemos?</h4>
+                                                <div class="centroV">
+                                                    <input class="checkmark" type="checkbox" checked="checked" name="whats" value="Acepta WhatsApp"> WhatsApp
+                                                </div>
+                                                <div class="centroV">
+                                                    <input class="checkmark" type="checkbox" name="llamada" value="Acepta Llamadas"> Llamada telefónica
+                                                </div>
+                                                <h4 style="margin-top: 30px;font-size: 1.1rem; letter-spacing: 1px;"> Horario de contacto:
+                                                </h4>
+                                                <select class="dropdown" name="horario" id="horario">
+                                            <option value="culquier hora" selected="selected">A cualquier hora</option>
+                                            <option value="09 a 14">09-14 hrs.</option>
+                                            <option value="14 a 18">14-18 hrs.</option>
+                                        </select>
+                                                <br>
+                                                <div style="padding-left: 7rem; margin-top: 2rem;">
+                                                    <button id="boton" href="Formulario.html" type="submit" value="Enviar" class="btn fbtna">Registrarse</button>
+                                                </div>
+                                                <button type="reset" id="limpiar" hidden=""></button>
+                                            </div>
+                                        </form>
+                                        <script>
+                                            $(document).ready(function() {
+                                                $("#limpiar").click();
+                                                $("#form-comun > textarea").html("");
+                                            });
+                                        </script>
+                                        <!--Fin formulario-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--Fin Modal-->
+            <!--Contenido-->
+            <!--Video-->
+            <!-- partial:index.partial.html -->
+            <section>
+                <div class="containerInicio ">
+                    <div class="containerVid ">
+                        <video class="video " autoplay muted loop>
+                    <source src="Video/faciales.mp4 ">
+                        </video>
+                    </div>
+                    <div class="containerImg ">
+                        <img class="imgFaciales " src="img/Resvera_Logo_Ventana.svg " alt="Faciales ">
+                    </div>
+                    <div style="margin-top: 100vh; ">
+                    </div>
+                    <div class="sobreVid ">
+                        <h4 style="font-size: 14px; letter-spacing: 4px; ">NOSOTROS</h4>
+                        <h3 style="font-size: 30px; line-height: 35px; ">Una experiencia<br>más allá del bienestar.</h3>
+                        <p style="letter-spacing: 1px; ">Somos un Skin Care Clinic - SPA, especializado<br>en el cuidado de tu piel, te ofrecemos una<br>experiencia personalizada con tratamientos<br>específicos, alta tecnología, medicina estética<br>y facialistas cuidadosamente seleccionados.
+                        </p>
+                    </div>
+                    <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btnVid btna " style="z-index: 3; " target="_blank ">RESERVAR</button>
+                </div>
+                <!--Fin video-->
+            </section>
+            <!--Seccion carrusel-->
+            <div>
+                <h3 style="margin-left: 100px; padding-top: 30px; font-size: 30px; font-family: GabrielaSReg; ">Tratamientos para tu piel</h3>
+                <div id="app" class="hide-on-mobile-tablet carrusel ">
+                </div>
+                <div class="carousel_mobile hide-on-desktop ">
+                    <div class="carousel_inner_mobile hide-on-desktop ">
+                        <a href="./tecnologias.html "><img src="./img/CarTec.png "></a>
+                        <h3 class="nibba ">Tecnologías</h3>
+                    </div>
+                    <div class="carousel_inner_mobile hide-on-desktop ">
+                        <a href="./faciales.html "><img src="./img/CarFaci.png "></a>
+                        <h3 class="nibba ">Faciales</h3>
+                    </div>
+                    <div class="carousel_inner_mobile hide-on-desktop ">
+                        <a href="./mesoterapia.html "><img src="./img/CarMeso.png "></a>
+                        <h3 class="nibba ">Mesoterapia</h3>
+                    </div>
+                    <div class="carousel_inner_mobile hide-on-desktop ">
+                        <a href="./medicina.html "><img src="./img/carME.png "></a>
+                        <h3 class="nibba ">Medicina Estética</h3>
+                    </div>
+                </div>
+            </div>
+            <!--Fin seccion carrusel-->
+            <!--Segundo carrusel-->
+            <div style="overflow: hidden; margin-bottom: 100px; ">
+                <h4 class="textoCabinas_mobile hide-on-desktop " style="font-size: 14px; letter-spacing: 4px; ">EXPERIENCIA</h4>
+                <h3 class="textoCabinas_mobile hide-on-desktop " style="font-size: 25px; font-family: GabrielaSReg; ">La experiencia dentro<br>de nuestras instalaciones</h3>
+                <p class="textoCabinas_mobile hide-on-desktop ">Cabinas de lujo y máximo confort para transportarse a un<br>ambiente de relajación total.
+                </p>
+                <div class="slideshow-container ">
+                    <div class="mySlides fade ">
+                        <img src="img/Resvera.jpeg " style="width:100% ">
+                        <div class="text "> Resvera<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+                    <div class="mySlides fade ">
+                        <img src="img/Lobby.jpeg " style="width:100% ">
+                        <div class="text "> Lobby Resvera<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+                    <div class="mySlides fade ">
+                        <img src="img/InstaSpot.jpeg " style="width:100% ">
+                        <div class="text "> Insta Spot Resvera<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <img src="img/cab1.png " style="width:100% ">
+                        <div class="text "> Cabina Emerald<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <img src="img/cab2.png " style="width:100% ">
+                        <div class="text ">Cabina Opal<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <img src="img/cab3.png " style="width:100% ">
+                        <div class="text ">Cabina Pearl<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <img src="img/cab4.png " style="width:100% ">
+                        <div class="text ">Cabina Ruby<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <img src="img/cab5.png " style="width:100% ">
+                        <div class="text ">Cabina Sapphire<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <img src="img/cab6.png " style="width:100% ">
+                        <div class="text ">Cabina Starlight<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <img src="img/terraza.jpeg " style="width:100% ">
+                        <div class="text "> Terraza Starlight<br>
+                            <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn btna ">RESERVAR</button>
+                        </div>
+                    </div>
+
+                    <a class="prev " onclick="plusSlides(-1) ">&#10094;</a>
+                    <a class="next " onclick="plusSlides(1) ">&#10095;</a>
+
+                </div>
+                <br>
+
+                <div class="dot_container ">
+                    <span class="dot " onclick="currentSlide(1) "></span>
+                    <span class="dot " onclick="currentSlide(2) "></span>
+                    <span class="dot " onclick="currentSlide(3) "></span>
+                    <span class="dot " onclick="currentSlide(4) "></span>
+                    <span class="dot " onclick="currentSlide(5) "></span>
+                    <span class="dot " onclick="currentSlide(6) "></span>
+                    <span class="dot " onclick="currentSlide(7) "></span>
+                    <span class="dot " onclick="currentSlide(8) "></span>
+                    <span class="dot " onclick="currentSlide(9) "></span>
+                    <span class="dot " onclick="currentSlide(10) "></span>
+                </div>
+
+
+                <h4 class="textoCabinas hide-on-mobile-tablet " style="font-size: 14px; letter-spacing: 4px; ">EXPERIENCIA</h4>
+                <h3 class="textoCabinas hide-on-mobile-tablet " style="font-size: 25px; font-family: GabrielaSReg; ">La experiencia dentro<br>de nuestras instalaciones</h3>
+                <p class="textoCabinas hide-on-mobile-tablet ">Cabinas de lujo y máximo confort para transportarse a un<br>ambiente de relajación total.
+                </p>
+
+            </div>
+        </div>
+        <!--Fin segundo carrusel-->
+        <footer>
+            <p class="footerTexto ">*Los resultados de los tratamientos mostrados pueden variar de acuerdo a las características de cada persona al igual que el tiempo utilizado para cada tratamiento. <br> *Es indispensable la realización de una valoración inicial y final por
+                tratamiento.
+            </p>
+            <div class="tablaContainer ">
+                <table align="center " class="tabla ">
+                    <tbody>
+                        <tr>
+                            <td class="tdfooter ">RESERVA CON NOSOTROS</td>
+                            <td class="tdfooter ">NUESTRA UBICACIÓN</td>
+                            <td class="tdfooter " rowspan="6 " style="padding-bottom: 10%; "><img src="img/logoFooter.png " style="width: 80%; "></td>
+                        </tr>
+                        <tr>
+                            <td class="tdfooter ">hola@resvera.com.mx<br><br>55-8946-9744</td>
+                            <td class="tdfooter " style="line-height: 20px; ">Arquímedes 198,<br>Colonia Polanco, Miguel Hidalgo, CDMX.</td>
+                        </tr>
+                        <tr>
+                            <td class="tdfooter ">
+                                <button role="link " onclick="javascript:window.open( 'https://wa.link/m4e73p', '_blank'); " class="btn fbtna " style="margin: 0%; ">RESERVAR</button>
+                            </td>
+                            <td class="tdfooter ">
+                                <button role="link " onclick="javascript:window.open( 'https://g.page/Resvera?share', '_blank'); " class="btn fbtna " style="letter-spacing: 3px; margin: 0; ">CÓMO LLEGAR</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdfooter ">
+                            </td>
+                            <td class="tdfooter ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdfooter " style="font-size: 15px; ">
+                                COFEPRIS #213300536X055
+                            </td>
+                            <td class="tdfooter ">SÍGUENOS EN NUESTRAS REDES SOCIALES<br>
+
+                                <a href="https://www.facebook.com/resveramx " target="_blank ">
+                                    <img src="img/ffacebook.svg " alt="facebook " style="margin: 5px; margin-top: 3.5vh; width: 20px; "></a>
+                                <a href="https://instagram.com/resveramx " target="_blank ">
+                                    <img src="img/finsta.svg " alt="instagram " style="margin: 5px; margin-top: 3.5vh; width: 20px; "></a>
+                                <a href="https://wa.link/m4e73p " target="_blank " target="_blank ">
+                                    <img src="img/fwhats.svg " alt="WhatsApp " style="margin: 5px; margin-top: 3.5vh; width: 20px; "></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdfooter "></td>
+                            <td class="tdfooter "></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3 " style="text-align: left; padding-left: 75px; ">
+                                <p>Copyright &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    Resvera Todos los derechos reservados <a href="avisoPriv.html " target="_blank " style="color: rgb(237, 237, 237); text-decoration-line:underline ; ">Aviso de
+                                    Privacidad</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3 " style="text-align: center; ">
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </footer>
+        <!--Fin contenido-->
+    </div>
+</body>
+<!--
+-->
+
+
+<!--Scrpts-->
+<!--Para que el modal aparezca solo-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "></script>
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $("#myModal").modal('show');
+        }, 1000); //1 000 = 1 segundo
+    });
+</script>
+<!--Fin del modal que aparece solo-->
+<!--Para que el modal aparezca solo Movil-->
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $("#myModalM").modal('show');
+        }, 1000); //1 000 = 1 segundo
+    });
+</script>
+<!--Fin del modal que aparece solo Movil-->
+<!--Modal-->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none ";
+        }
+    }
+</script>
+<!--Fin Modal-->
+<!--Modal-->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModalM");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none ";
+        }
+    }
+</script>
+<!--Fin Modal-->
+<!--Sidemenu-->
+<script>
+    //Para la funcionalidad del sidemenu
+    function OCNav() {
+        var nav = document.getElementById("mySidenav");
+        var estado = nav.style.width;
+
+        if (estado <= "0px") {
+            openNav();
+        } else {
+            closeNav();
+        }
+    }
+
+    function openNav() {
+        setTimeout(() => {
+            document.getElementById("Nibba").style.backgroundColor = "rgba(0,0,0,0.5) ";
+        }, 300);
+        document.getElementById("Nibba").style.width = "100%"
+        document.getElementById("Nibba").style.height = "100%"
+        document.getElementById("mySidenav").style.width = "20rem";
+    }
+
+    function closeNav() {
+
+        document.getElementById("Nibba").style.backgroundColor = "rgba(0,0,0,0) ";
+        setTimeout(() => {
+            document.getElementById("Nibba").style.width = "0%"
+            document.getElementById("Nibba").style.height = "0%"
+        }, 700);
+        document.getElementById("mySidenav").style.width = "0px ";
+        document.getElementById("mySidenav2").style.width = "0px ";
+        document.getElementById("mySidenav3").style.width = "0px ";
+        document.getElementById("mySidenav4").style.width = "0px ";
+    }
+
+    function OCNav2() {
+        var nav = document.getElementById("mySidenav2");
+        var estado = nav.style.width;
+
+        if (estado <= "0px") {
+            openNav2();
+        } else {
+            closeNav2();
+        }
+    }
+
+    function openNav2() {
+        document.getElementById("mySidenav2").style.width = "20rem ";
+    }
+
+    function closeNav2() {
+        document.getElementById("mySidenav2").style.width = "0px ";
+
+    }
+
+    function OCNav3() {
+        var nav = document.getElementById("mySidenav3");
+        var estado = nav.style.width;
+
+        if (estado <= "0px") {
+            openNav3();
+        } else {
+            closeNav3();
+        }
+    }
+
+    function openNav3() {
+        document.getElementById("mySidenav3").style.width = "20rem ";
+    }
+
+    function closeNav3() {
+        document.getElementById("mySidenav3").style.width = "0px ";
+    }
+
+    function OCNav4() {
+        var nav = document.getElementById("mySidenav4");
+        var estado = nav.style.width;
+
+        if (estado <= "0px") {
+            openNav4();
+        } else {
+            closeNav4();
+        }
+    }
+
+    function openNav4() {
+        document.getElementById("mySidenav4").style.width = "20rem ";
+    }
+
+    function closeNav4() {
+        document.getElementById("mySidenav4").style.width = "0px ";
+    }
+</script>
+<!--Fin sidemenu-->
+<!--Carrusel-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.min.js '></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js '></script>
+<script src="scripts/script.js "></script>
+<!--Fin Carrusel-->
+<!--Segundo carrusel-->
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none ";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+        }
+        slides[slideIndex - 1].style.display = "block ";
+        dots[slideIndex - 1].className += "active";
+    }
+</script>
+<!--Fin Segundo carrusel-->
+<!--Segundo carrusel movil-->
+<script>
+    var slideIndexMov = 1;
+    showSlidesMov(slideIndexMov);
+
+    function plusSlidesMov(n) {
+        showSlidesMov(slideIndexMov += n);
+    }
+
+    function currentSlideMov(n) {
+        showSlidesMov(slideIndexMov = n);
+    }
+
+    function showSlidesMov(n) {
+        var i;
+        var slidesMov = document.getElementsByClassName("mySlidesMov");
+        var dotsMov = document.getElementsByClassName("dotMov");
+        if (n > slidesMov.length) {
+            slideIndexMov = 1
+        }
+        if (n < 1) {
+            slideIndexMov = slidesMov.length
+        }
+        for (i = 0; i < slidesMov.length; i++) {
+            slidesMov[i].style.display = "none ";
+        }
+        for (i = 0; i < dotsMov.length; i++) {
+            dotsMov[i].className = dotsMov[i].className.replace("active", "");
+        }
+        slidesMov[slideIndexMov - 1].style.display = "block";
+        dotsMov[slideIndexMov - 1].className += " active";
+    }
+</script>
+<!--Fin Segundo carrusel movil-->
+<!--Fin Scripts-->
