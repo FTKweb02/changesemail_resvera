@@ -1,2 +1,0 @@
-# ResveraDef
-Resvera desde cero
